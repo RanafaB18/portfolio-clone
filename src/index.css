@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+body {
+    background-color: rgb(3 7 18);
+    color: rgb(209 213 219);
+    position: relative;
+    font-family: 'Urbanist';
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
