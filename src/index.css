@@ -5,6 +5,7 @@ body {
     position: relative;
     font-family: 'Urbanist';
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

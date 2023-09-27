@@ -11,6 +11,7 @@ const LandingScreen = () => {
         <Introduction />
         <AboutMe />
         <TechnicalSkills />
+        <Projects />
       </main>
       <NavBar />
       <footer></footer>
