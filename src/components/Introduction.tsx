@@ -16,7 +16,7 @@ const Introduction = () => {
           textColor="text-gray-400"
         />
       </>
-      <img loading="lazy" src="src/assets/a.png" alt="image of some art" />
+      <img loading="lazy" src="/a.png" alt="image of some art" />
     </section>
   );
 };
