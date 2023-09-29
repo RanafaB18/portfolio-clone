@@ -2,7 +2,8 @@ import React, { Dispatch, SetStateAction, createContext, useState } from "react"
 
 interface DataContextType {
     open: boolean,
-    setOpen: Dispatch<SetStateAction<boolean>>
+    setOpen: Dispatch<SetStateAction<boolean>>,
+
 }
 export const DataContext = createContext<DataContextType | null>(null);
 
@@ -11,7 +12,7 @@ const DataContextProvider = ({ children }: { children: React.ReactNode }) => {
 
   return <DataContext.Provider value={{
     open,
-    setOpen
+    setOpen,
   }}>
     { children }
   </DataContext.Provider>;

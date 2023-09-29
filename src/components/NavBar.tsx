@@ -57,8 +57,8 @@ const NavBar = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
+                delay={300}
                 onClick={closeSideBar}
-                href="#skills"
                 className="flex items-center gap-1"
               >
                 <svg
@@ -74,7 +74,14 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="flex flex-col gap-2 border-b-2 border-b-[#424242] pb-4">
-              <a href="#projects" className="flex items-center gap-1">
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                delay={300}
+                onClick={closeSideBar}
+                className="flex items-center gap-1"
+              >
                 <svg
                   className="w-6 h-6 fill-blue-300"
                   focusable="false"
@@ -85,7 +92,7 @@ const NavBar = () => {
                   <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm0-3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm3 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm0-3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm3 3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm0-3c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-8-4c0-2.76 2.24-5 5-5s5 2.24 5 5c0 .55-.45 1-1 1H8c-.55 0-1-.45-1-1z"></path>
                 </svg>
                 <p>projects</p>
-              </a>
+              </Link>
             </li>
           </ul>
         </motion.div>
