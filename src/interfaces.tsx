@@ -17,3 +17,10 @@ export interface IDemo {
 export interface ILive {
   siteUrl: string;
 }
+
+export interface Skill {
+  skillName: string;
+  link: string;
+  description: string;
+  id?: number;
+}

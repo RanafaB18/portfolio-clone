@@ -43,13 +43,13 @@ const Project = ({
   live,
 }: IProject) => {
   return (
-    <div className="flex flex-col md:flex-row gap-2 md:gap-0 mt-12 md:max-w-7xl md:mx-auto">
+    <div className="flex flex-col md:flex-row gap-2 md:gap-0 mt-12 md:max-w-5xl md:mx-auto md:h-[470px]">
       <motion.div
         initial="slideLeft"
         variants={variant}
         whileInView={animation}
         viewport={{ once: true }}
-        className="flex flex-col md:w-96 md:gap-10 gap-5 bg-[#6e6e6e] bg-opacity-20 p-3 rounded-l-md"
+        className="flex flex-col md:w-96 md:gap-10 gap-5 bg-[#6e6e6e] bg-opacity-20 p-3 rounded md:rounded-l-md"
       >
         <div className="flex flex-wrap gap-3 w-full">
           {toolsUsed.map((tool, index) => {
@@ -131,10 +131,10 @@ const Project = ({
         variants={variant}
         whileInView={animation}
         viewport={{ once: true }}
-        className="w-full rounded h-52 md:h-full"
+        className="w-full rounded h-fit md:h-full"
       >
         <img
-          className="rounded-lg md:rounded h-full"
+          className="rounded-lg md:rounded h-full w-full "
           loading="lazy"
           src={imageUrl}
           alt=""

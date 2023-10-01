@@ -1,18 +1,16 @@
+import { Skill } from "../interfaces";
+
 const SkillCard = ({
   skillName,
   link,
   description,
-}: {
-  skillName: string;
-  link: string;
-  description: string;
-}) => {
+}: Skill) => {
   return (
     <div className="flex flex-col p-6 text-sm gap-4 w-72 max-h-fit rounded-lg bg-[#1a1a1a]">
       <div className="flex items-center justify-between">
         <span className="font-bold">{skillName}</span>
         <span className="text-sm font-bold text-gray-500">
-          <a href={link}>
+          <a href={link} target="_blank">
             learn more{" "}
             <span>
               <svg
