@@ -24,18 +24,18 @@ const AnimatedText = ({
       variants={container}
       initial="hidden"
       animate="visible"
-      className="flex max-w-sm mx-auto items-baseline flex-wrap whitespace-pre-wrap"
+      className="flex max-w-sm mx-auto items-baseline flex-wrap whitespace-pre-wrap md:mx-0 md:max-w-lg"
     >
       {letters.map((letter: string, index: number) => {
         return (
           <motion.span
             variants={container}
-            className={`text-5xl font-bold ${textColor}`}
+            className={`text-5xl md:text-8xl font-bold ${textColor}`}
             key={index}
           >
             {letter === "." ? (
               <span
-                className="block w-2 h-2 md:w-2 md:h-2 rounded-full bg-orange-600"
+                className="block w-2 h-2 md:w-3 md:h-3 rounded-full bg-orange-600"
               ></span>
             ) : (
               letter

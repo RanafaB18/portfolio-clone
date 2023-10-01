@@ -12,7 +12,9 @@ const LandingScreen = () => {
       <Header />
       <main className="p-6 font-urbanist">
         <Introduction />
-        <AboutMe />
+        <article className="md:hidden">
+          <AboutMe />
+        </article>
         <TechnicalSkills />
         <Projects />
         <ContactMe />

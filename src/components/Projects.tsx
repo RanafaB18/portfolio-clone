@@ -2,8 +2,8 @@ import Project from "./Project";
 import { projects } from "../data/projects";
 const Projects = () => {
   return (
-    <section id="projects" className="mb-20">
-      <h2 className="text-2xl text-center font-bold mt-24">
+    <section id="projects" className="flex flex-col items-center mb-20">
+      <h2 className="text-2xl text-center font-bold mt-24 md:text-4xl">
         Projects I've worked on
       </h2>
 

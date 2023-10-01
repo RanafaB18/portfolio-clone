@@ -43,7 +43,7 @@ const Menu = () => {
   return (
     <motion.div
       onClick={handleClick}
-      className="flex flex-col gap-1 cursor-pointer"
+      className="flex flex-col gap-1 cursor-pointer md:hidden"
     >
       <motion.div
         variants={top}

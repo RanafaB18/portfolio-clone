@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <article className="text-gray-300 font-semibold text-sm">
+    <article className="text-gray-300 font-semibold text-sm md:max-w-sm md:text-md">
       Hey there! This is Abdul-Raziq! As a <span className="text-purple-300">full-stack developer</span>{" "}
       with a passion for <span className="text-purple-300"> UI design,</span> I'm thrilled to have you here.
       I have experience building <span className="text-purple-300">responsive websites, </span>

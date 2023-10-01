@@ -2,8 +2,35 @@ import { IProject } from "../interfaces";
 import { motion } from "framer-motion";
 
 const animation = {
-   opacity: 1,
-   transition: { delay: .4, duration: .5 }
+  opacity: 1,
+  transition: { delay: 0.4, duration: 1, ease: "easeOut" },
+  x: 0,
+  translateX: 0,
+  rotateY: 0
+};
+
+const variant = {
+  slideLeft: {
+    opacity: 0,
+    translateX: "-50%",
+    rotateY: "-20deg",
+    transformPerspective: "800px",
+
+
+  },
+  slideRight: {
+    opacity: 0,
+    translateX: "50%",
+    rotateY: "20deg",
+    transformPerspective: "800px",
+  },
+  visible: {
+    opacity: 1,
+    translateX: 0
+  },
+  hidden: {
+    opacity: 0
+  }
 }
 
 const Project = ({
@@ -16,8 +43,14 @@ const Project = ({
   live,
 }: IProject) => {
   return (
-    <div className="flex flex-col gap-2 mt-12">
-      <motion.div initial={{opacity: 0}} whileInView={animation} viewport={{ once: true }} className="flex flex-col gap-5 bg-[#6e6e6e] bg-opacity-20 p-3 rounded-md">
+    <div className="flex flex-col md:flex-row gap-2 md:gap-0 mt-12 md:max-w-7xl md:mx-auto">
+      <motion.div
+        initial="slideLeft"
+        variants={variant}
+        whileInView={animation}
+        viewport={{ once: true }}
+        className="flex flex-col md:w-96 md:gap-10 gap-5 bg-[#6e6e6e] bg-opacity-20 p-3 rounded-l-md"
+      >
         <div className="flex flex-wrap gap-3 w-full">
           {toolsUsed.map((tool, index) => {
             return (
@@ -34,7 +67,7 @@ const Project = ({
           {projectName}.
         </h2>
         <p>{description}</p>
-        <div className="flex justify-around">
+        <div className="flex justify-around md:mt-12">
           <a
             target="_blank"
             href={githubLink}
@@ -93,9 +126,15 @@ const Project = ({
           )}
         </div>
       </motion.div>
-      <motion.div initial={{opacity: 0}} whileInView={animation} viewport={{ once: true }} className="w-full rounded h-52">
+      <motion.div
+        initial="slideRight"
+        variants={variant}
+        whileInView={animation}
+        viewport={{ once: true }}
+        className="w-full rounded h-52 md:h-full"
+      >
         <img
-          className="rounded-lg h-full"
+          className="rounded-lg md:rounded h-full"
           loading="lazy"
           src={imageUrl}
           alt=""
