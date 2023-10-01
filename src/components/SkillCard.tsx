@@ -8,7 +8,7 @@ const SkillCard = ({
   description: string;
 }) => {
   return (
-    <div className="flex flex-col gap-4 max-w-xs mx-auto h-52 rounded-lg p-3 bg-[#1a1a1a]">
+    <div className="flex flex-col p-6 text-sm gap-4 w-72 max-h-fit rounded-lg bg-[#1a1a1a]">
       <div className="flex items-center justify-between">
         <span className="font-bold">{skillName}</span>
         <span className="text-sm font-bold text-gray-500">
